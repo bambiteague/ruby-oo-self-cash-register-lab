@@ -1,4 +1,4 @@
-
+require 'pry'
 class CashRegister
     attr_accessor :total, :discount, :items, :new_total
     def initialize(discount = 0)
@@ -6,7 +6,7 @@ class CashRegister
         @total = 0
         @items = []
     end
-
+ 
     def add_item(title, price, quantity = 1)
         self.total += price * quantity
         quantity.times do 
@@ -25,13 +25,21 @@ class CashRegister
         end
     end
 
-    def items
-        @items
-    end
+    # def items
+    #     @items
+    # end
 
     def void_last_transaction
         self.total = self.total - self.new_total
-        self. total
     end
-
 end
+
+
+
+# my_cash_register = CashRegister.new
+
+# my_cash_register.add_item("milk", 2, 3)
+
+# puts my_cash_register.items
+
+# puts my_cash_register.total
