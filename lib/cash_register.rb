@@ -1,4 +1,6 @@
 require 'pry'
+
+
 class CashRegister
     attr_accessor :total, :discount, :items, :new_total
     def initialize(discount = 0)
